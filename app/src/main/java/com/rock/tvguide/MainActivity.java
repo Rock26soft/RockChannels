@@ -41,11 +41,7 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void initializePlayer() {
-    String userAgent = Util.getUserAgent(this, "tv");
-    DefaultDataSourceFactory dataSourceFactory = new DefaultDataSourceFactory(
-      this,
-      userAgent
-    );
+    
     player =
       new SimpleExoPlayer.Builder(this)
         .setMediaSourceFactory(new DefaultMediaSourceFactory(this))
