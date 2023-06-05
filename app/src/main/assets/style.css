@@ -1,0 +1,12 @@
+video {
+   height: 100%;
+   width: 100%;
+}
+source {
+   height: 100%;
+   width: 100%;
+}
+.buttoncss{
+    height: 0;
+    visibility: collapse;
+}

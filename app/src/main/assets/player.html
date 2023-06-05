@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shaka Player - ClearKey DRM Example</title>
+        <style>
+            *{
+                padding: 0%;
+                margin: 0;
+            }
+            video {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <video id="videoPlayer" controls autoplay></video>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.3.6/shaka-player.compiled.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var videoElement = document.getElementById('videoPlayer');
+                var manifestUrl = "==link==";
+
+                shaka.polyfill.installAll();
+
+                if (shaka.Player.isBrowserSupported()) {
+                    initPlayer(videoElement, manifestUrl);
+                } else {
+                    console.error('Browser not supported!');
+                }
+            });
+
+            function initPlayer(videoElement, manifestUrl) {
+                var player = new shaka.Player(videoElement);
+
+                player.configure({
+                    drm: {
+                        clearKeys: { // 'key-id-in-hex': 'key-in-hex',
+                            
+                            '==kid==': '==k=='
+                        }
+                    }
+                });
+                player.load(manifestUrl).then(function () {
+                    console.log('Video loaded successfully!');
+                }).catch(function (error) {
+                    console.error('Error loading video:', error);
+                });
+            }
+        </script>
+    </body>
+</html>
