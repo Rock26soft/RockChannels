@@ -25,8 +25,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew assembleDebug
       
-    - name: Upload APK Debug - ${{ env.repository_name }}
+    - name: Upload APK Debug
       uses: actions/upload-artifact@v3 
       with:
-        name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
-        path: ${{ env.main_project_module }}/build/outputs/apk/debug/
+        name: debug.apk
+        path: app/build/outputs/apk/debug/
