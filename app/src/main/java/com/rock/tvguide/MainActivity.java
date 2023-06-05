@@ -8,6 +8,7 @@ import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.drm.*;
 import com.google.android.exoplayer2.source.*;
+import com.google.android.exoplayer2.source.dash.*;
 import com.google.android.exoplayer2.trackselection.*;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.*;
