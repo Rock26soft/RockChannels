@@ -1,0 +1,6 @@
+R_DEF: Internal format may change without notice
+local
+drawable icon
+id linear2
+id side_nav
+layout activity_main

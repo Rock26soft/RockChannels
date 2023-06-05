@@ -1,0 +1,72 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.rock.tvguide"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:5:2-64
+11-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:5:19-61
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:6:2-76
+12-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:6:19-73
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:7:2-77
+13-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:7:19-74
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:8:2-78
+14-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:8:19-75
+15    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+15-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:9:2-68
+15-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:9:19-65
+16    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+16-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:10:2-75
+16-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:10:19-72
+17
+18    <application
+18-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:12:5-32:19
+19        android:allowBackup="true"
+19-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:14:9-35
+20        android:debuggable="true"
+21        android:icon="@drawable/icon"
+21-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:15:3-32
+22        android:label="TV_Guide"
+22-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:13:9-33
+23        android:requestLegacyExternalStorage="true"
+23-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:16:3-46
+24        android:usesCleartextTraffic="true" >
+24-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:17:3-38
+25        <activity
+25-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:19:9-31:20
+26            android:name="com.rock.tvguide.MainActivity"
+26-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:20:13-41
+27            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+27-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:22:13-106
+28            android:exported="true"
+28-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:21:13-36
+29            android:hardwareAccelerated="true"
+29-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:23:4-38
+30            android:supportsPictureInPicture="true"
+30-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:24:4-43
+31            android:windowSoftInputMode="stateHidden" >
+31-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:25:4-45
+32            <intent-filter>
+32-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:27:13-30:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:28:17-68
+33-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:28:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:29:17-76
+35-->/home/rockan/Documents/android apps/TV_Guide/app/src/main/AndroidManifest.xml:29:27-74
+36            </intent-filter>
+37        </activity>
+38    </application>
+39
+40</manifest>

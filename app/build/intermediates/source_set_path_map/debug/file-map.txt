@@ -1,0 +1,7 @@
+com.rock.tvguide.app-pngs-0 /home/rockan/Documents/android apps/TV_Guide/app/build/generated/res/pngs/debug
+com.rock.tvguide.app-resValues-1 /home/rockan/Documents/android apps/TV_Guide/app/build/generated/res/resValues/debug
+com.rock.tvguide.app-packageDebugResources-2 /home/rockan/Documents/android apps/TV_Guide/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.rock.tvguide.app-packageDebugResources-3 /home/rockan/Documents/android apps/TV_Guide/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.rock.tvguide.app-merged_res-4 /home/rockan/Documents/android apps/TV_Guide/app/build/intermediates/merged_res/debug
+com.rock.tvguide.app-debug-5 /home/rockan/Documents/android apps/TV_Guide/app/src/debug/res
+com.rock.tvguide.app-main-6 /home/rockan/Documents/android apps/TV_Guide/app/src/main/res
