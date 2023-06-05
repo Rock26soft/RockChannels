@@ -6,20 +6,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.exoplayer2.*;
 import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.trackselection.*;
-import com.google.android.exoplayer2.upstream.*;
-import com.google.android.exoplayer2.source.*;
 import com.google.android.exoplayer2.drm.*;
+import com.google.android.exoplayer2.source.*;
+import com.google.android.exoplayer2.trackselection.*;
 import com.google.android.exoplayer2.ui.PlayerView;
+import com.google.android.exoplayer2.upstream.*;
 import com.google.android.exoplayer2.util.Util;
 import java.util.UUID;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
   private SimpleExoPlayer player;
   private PlayerView playerView;
-
- 
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -42,13 +41,19 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void initializePlayer() {
+    String userAgent = Util.getUserAgent(this, "tv");
+    DefaultDataSourceFactory dataSourceFactory = new DefaultDataSourceFactory(
+      this,
+      userAgent
+    );
     player =
       new SimpleExoPlayer.Builder(this)
-        .setMediaSourceFactory(new DefaultMediaSourceFactory(headers()))
+        .setMediaSourceFactory(new DefaultMediaSourceFactory(this))
         .build();
     playerView.setPlayer(player);
     DataSource.Factory dataSourceFactory = new DefaultHttpDataSource.Factory();
-    String vid ="https://bpprod7linear.akamaized.net/bpk-tv/irdeto_com_Channel_257/output/manifest.mpd";
+    String vid =
+      "https://bpprod7linear.akamaized.net/bpk-tv/irdeto_com_Channel_257/output/manifest.mpd";
 
     Uri videoURI = Uri.parse(vid);
 
