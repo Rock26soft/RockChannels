@@ -20,13 +20,17 @@ public class MainActivity extends AppCompatActivity {
 
   private SimpleExoPlayer player;
   private PlayerView playerView;
+   String mpd ="https://bpprod7linear.akamaized.net/bpk-tv/irdeto_com_Channel_257/output/manifest.mpd";
+  //String keyStrin = "{\"keys\":[{\"kty\":\"oct\",\"k\":\"BiTNLoAjrsXatKgrICCq9w\",\"kid\":\"HL4pP9w4XayMDVArBPM45A\"}],'type':\"temporary\"}";
+    String keyString = "https://madstream.live/playlist/keys/starplus";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-
     playerView = findViewById(R.id.player_view);
+
+    
   }
 
   @Override
@@ -49,17 +53,16 @@ public class MainActivity extends AppCompatActivity {
         .build();
     playerView.setPlayer(player);
     DataSource.Factory dataSourceFactory = new DefaultHttpDataSource.Factory();
-    String vid =
-      "https://bpprod7linear.akamaized.net/bpk-tv/irdeto_com_Channel_257/output/manifest.mpd";
+   
 
-    Uri videoURI = Uri.parse(vid);
+    Uri videoURI = Uri.parse(mpd);
 
-    String keyString =
-      "{\"keys\":[{\"kty\":\"oct\",\"k\":\"BiTNLoAjrsXatKgrICCq9w\",\"kid\":\"HL4pP9w4XayMDVArBPM45A\"}],'type':\"temporary\"}";
+    
 
-    MediaDrmCallback drmCallback = new LocalMediaDrmCallback(
-      keyString.getBytes()
-    );
+    MediaDrmCallback drmCallback = new LocalMediaDrmCallback(keyString.getBytes());
+    if(keyString.contains("http")){
+        drmCallback = new HttpMediaDrmCallback(keyString,new DefaultHttpDataSource.Factory());
+    }
 
     MediaSource dashMediaSource = new DashMediaSource.Factory(dataSourceFactory)
       .setDrmSessionManagerProvider(mediaItem -> {
