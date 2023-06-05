@@ -17,12 +17,13 @@
 		android:usesCleartextTraffic="true">
  
         <activity 
-            android:name=".MainActivity"
-            android:exported="true"
-            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-			android:hardwareAccelerated="true"
-			android:supportsPictureInPicture="true"
-			android:windowSoftInputMode="stateHidden"
+                android:name=".MainActivity"
+                android:exported="true"
+                android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+		android:hardwareAccelerated="true"
+		android:supportsPictureInPicture="true"
+		android:windowSoftInputMode="stateHidden"
+		android:theme="@style/AppTheme.FullScreen"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
