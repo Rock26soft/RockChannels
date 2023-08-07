@@ -10,10 +10,5 @@
 		<item name="android:windowFullscreen">true</item>
 		<item name="android:windowContentOverlay">@null</item>
 	</style>
-	<style name="StyledPlayerView" parent="@style/PlayerView.Default">
-		
-		<item name="exo_show_buffering">when_playing</item>
-		<item name="exo_progress_bar_color">#ff0011</item>
-		
-	</style>
+	
 </resources>
