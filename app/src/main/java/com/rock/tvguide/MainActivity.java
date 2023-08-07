@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
   private EditText urlEditText;
   private Button downloadButton;
   private TextView resultTextView;
+  private Handler mainHandler;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +38,51 @@ public class MainActivity extends Activity {
     resultTextView = findViewById(R.id.tv);
     try {
       YoutubeDL.getInstance().init(this);
-      tv.setText(("Done").toString());
+      resultTextView.setText(("Done").toString());
     } catch (YoutubeDLException e) {
-      tv.setText(e.toString());
+      resultTextView.setText(e.toString());
     }
+
+    mainHandler = new Handler(Looper.getMainLooper());
+
+    downloadButton.setOnClickListener(
+      new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          final String url = urlEditText.getText().toString();
+          if (!url.isEmpty()) {
+            // Run the task in a background thread
+            new Thread(
+              new Runnable() {
+                @Override
+                public void run() {
+                  // Perform your background tasks here
+                  final String videoUrl = getVideoUrlFromUrl(url);
+
+                  // Update UI on the main thread
+                  mainHandler.post(
+                    new Runnable() {
+                      @Override
+                      public void run() {
+                        resultTextView.setText(videoUrl);
+                      }
+                    }
+                  );
+                }
+              }
+            )
+              .start();
+          }
+        }
+      }
+    );
+  }
+
+  private String getVideoUrlFromUrl(String url) {
+    YoutubeDLRequest request = new YoutubeDLRequest(url);
+    request.addOption("-f", "best");
+    VideoInfo streamInfo = YoutubeDL.getInstance().getInfo(request);
+    return streamInfo.getUrl().toString();
   }
 
   @Override
