@@ -30,7 +30,7 @@ public class PlayerActivity extends AppCompatActivity {
     playerView.setPlayer(player);
 
     Uri uri = Uri.parse(getIntent().getStringExtra("url"));
-    MediaItem mediaItem = MediaItem.fromUri(videoUri);
+    MediaItem mediaItem = MediaItem.fromUri(uri);
     // Set the media item to be played.
     player.setMediaItem(mediaItem);
     // Prepare the player.
