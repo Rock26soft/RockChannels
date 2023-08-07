@@ -79,10 +79,14 @@ public class MainActivity extends Activity {
   }
 
   private String getVideoUrlFromUrl(String url) {
-    YoutubeDLRequest request = new YoutubeDLRequest(url);
-    request.addOption("-f", "best");
-    VideoInfo streamInfo = YoutubeDL.getInstance().getInfo(request);
-    return streamInfo.getUrl().toString();
+    try {
+      YoutubeDLRequest request = new YoutubeDLRequest(url);
+      request.addOption("-f", "best");
+      VideoInfo streamInfo = YoutubeDL.getInstance().getInfo(request);
+      return streamInfo.getUrl().toString();
+    } catch (Exception e) {
+      return "not";
+    }
   }
 
   @Override
