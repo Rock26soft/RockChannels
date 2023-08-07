@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Download"
-        android:layout_below="@id/urlEditText"
+        android:layout_below="@id/ed1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
 
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
-        android:layout_below="@id/downloadButton"
+        android:layout_below="@id/btn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
 
