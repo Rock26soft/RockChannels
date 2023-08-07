@@ -40,5 +40,5 @@ jobs:
       uses: actions/upload-artifact@v3 
       with:
         name: debug.apk
-        path: /
-        zip-file: false
+        path: app/build/outputs/apk/debug/
+        
