@@ -18,7 +18,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.yausername.youtubedl_android.*;
-import com.yausername.youtubedl_android.YoutubeDLRequest;
+import com.yausername.youtubedl_android.mapper.*;
 import java.io.File;
 import java.util.UUID;
 
