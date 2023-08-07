@@ -2,10 +2,10 @@ package com.rock.tvguide;
 
 import android.Manifest;
 import android.app.*;
+import android.content.*;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.*;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
@@ -17,12 +17,13 @@ import android.widget.ProgressBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 import com.yausername.youtubedl_android.*;
 import com.yausername.youtubedl_android.mapper.*;
 import java.io.File;
 import java.util.UUID;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
   private EditText urlEditText;
   private Button downloadButton;
@@ -65,6 +66,12 @@ public class MainActivity extends Activity {
                       @Override
                       public void run() {
                         resultTextView.setText(videoUrl);
+                        Intent intent = new Intent(
+                          MainActivity.this,
+                          PlayerActivity.class
+                        );
+                        intent.putExtra("url", videoUrl);
+                        startActivity(intent);
                       }
                     }
                   );
