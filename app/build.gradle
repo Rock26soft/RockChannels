@@ -23,9 +23,7 @@ android {
         }
     }
 }
-repositories {
-        maven { url 'https://jitpack.io' }
-    }
+
 dependencies {
     implementation 'com.github.yausername.youtubedl-android:library:0.14.+'
     implementation 'com.github.yausername.youtubedl-android:ffmpeg:0.14.+' // Optional
