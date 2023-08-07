@@ -13,7 +13,7 @@ android {
         targetSdkVersion 33 //compile for this API
         versionCode 1
         versionName "1.0"
-        multiDexEnabled true
+        
     }
     buildTypes {
         release {
@@ -24,7 +24,7 @@ android {
     }
 }
 dependencies {
-   implementation 'com.google.android.exoplayer:exoplayer:2.18.7'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation "androidx.multidex:multidex:2.0.1"
+    implementation 'com.github.yausername.youtubedl-android:library:0.14.+'
+    implementation 'com.github.yausername.youtubedl-android:ffmpeg:0.14.+' // Optional
+    implementation 'com.github.yausername.youtubedl-android:aria2c:0.14.+' // Optional
 }
