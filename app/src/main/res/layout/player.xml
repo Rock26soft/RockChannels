@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:resize_mode="fill"
-        app:rewind_increment="30000"
-        app:fastforward_increment="30000"
+        app:surface_type="texture_view"
+       
     />
 </RelativeLayout>
